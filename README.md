@@ -7,16 +7,16 @@ Sehr geehrter Herr Hoffmann, sehr geehrter Herr Höppner,
 vielen Dank für die Einladung zum Gespräch. Hier finden Sie alle Unterlagen an einem Ort.
 
 <p>
-  <a href="https://borehole-hub-3a93c.containers.snapdeploy.app"><img src="https://img.shields.io/badge/BoreholeHub-live%20%C3%B6ffnen-b85a2e?style=for-the-badge" alt="BoreholeHub live öffnen" height="40"></a>
+  <a href="https://boreholehub.wasmer.app/"><img src="https://img.shields.io/badge/BoreholeHub-live%20%C3%B6ffnen-b85a2e?style=for-the-badge" alt="BoreholeHub live öffnen" height="40"></a>
 </p>
 
-**[BoreholeHub jetzt im Browser öffnen](https://borehole-hub-3a93c.containers.snapdeploy.app)** – beim ersten Aufruf bitte etwa eine Minute warten, dann „Demo-Projekt laden“ klicken.
+**[BoreholeHub jetzt im Browser öffnen](https://boreholehub.wasmer.app/)** – startet sofort; auf der Startseite „Demo-Projekt laden“ klicken.
 
 ## Inhalt
 
 | Datei | Was ist das? | Umfang |
 |---|---|---|
-| [BoreholeHub-Live-Demo.url](BoreholeHub-Live-Demo.url) | Verknüpfung: öffnet die Live-Demo im Browser (Doppelklick, Windows) | 1 Klick |
+| [BoreholeHub-Live-Demo.url](BoreholeHub-Live-Demo.url) | Verknüpfung: öffnet die Live-Demo [boreholehub.wasmer.app](https://boreholehub.wasmer.app/) im Browser (Doppelklick, Windows) | 1 Klick |
 | [6-Monats-Plan-Sohrab-Talebian-Far-1.0.4.pdf](6-Monats-Plan/6-Monats-Plan-Sohrab-Talebian-Far-1.0.4.pdf) | Mein Plan für die ersten sechs Monate | 3 Seiten, A4 |
 | [6-Monats-Plan-Video-1.1.1.mp4](6-Monats-Plan/6-Monats-Plan-Video-1.1.1.mp4) | Der Plan als Video, mit Untertiteln ([SRT](6-Monats-Plan/6-Monats-Plan-Video-1.1.1.srt)) | 2:04 Minuten |
 | [Vorstellung-Sohrab-Talebian-Far.pdf](Praesentation/Vorstellung-Sohrab-Talebian-Far.pdf) | Meine Präsentation für das Gespräch | 12 Folien |
@@ -42,11 +42,13 @@ Mit KI-Unterstützung gebaut, synthetische Daten. Es sind keine echten Kundendat
 
 ### Live ausprobieren
 
-Adresse: [borehole-hub-3a93c.containers.snapdeploy.app](https://borehole-hub-3a93c.containers.snapdeploy.app)
+Adresse: [boreholehub.wasmer.app](https://boreholehub.wasmer.app/)
 
-1. Der kostenlose Server schläft nach 15 Minuten ohne Besucher. Der erste Aufruf kann etwa eine Minute dauern.
-2. Nach dem Aufwachen ist die App leer. Klicken Sie auf der Startseite auf "Demo-Projekt laden".
-3. Eingaben werden nicht gespeichert.
+1. Die Seite startet sofort, ohne Wartezeit.
+2. Klicken Sie auf der Startseite auf "Demo-Projekt laden".
+3. Diese Version läuft ganz im Browser (ohne Server). Eingaben bleiben nur in Ihrem Browser gespeichert. Den PDF-Bericht öffnet „PDF-Bericht“ als Druckansicht; dort „Drucken / als PDF speichern“ wählen (am besten in Chrome oder Edge).
+
+Server-Version mit ASP.NET Core: [borehole-hub-3a93c.containers.snapdeploy.app](https://borehole-hub-3a93c.containers.snapdeploy.app) – der kostenlose Server schläft nach 15 Minuten ohne Besucher, der erste Aufruf kann etwa eine Minute dauern; danach ebenfalls „Demo-Projekt laden“ klicken. Eingaben werden dort nicht gespeichert.
 
 <img src="BoreholeHub/Bilder/01-karte-hell.png" width="800" alt="Karte mit den Bohrpunkten des Demo-Projekts und dem Steckbrief von KRB 3, helle Darstellung">
 
@@ -74,7 +76,8 @@ Unter **Releases** (rechts auf dieser Seite) liegt `BoreholeHub-1.0.2-win-x64.zi
 ### Technik
 
 - ASP.NET Core 8 (Razor Pages) mit Entity Framework Core
-- SQL Server (auf meinem PC), SQLite (Online-Demo und Tests)
+- SQL Server (auf meinem PC), SQLite (Server-Demo und Tests)
+- Zusätzlich eine reine Browser-Version (JavaScript, ohne Server) für [boreholehub.wasmer.app](https://boreholehub.wasmer.app/): gleiche Seiten, Zeichnungen und Ergebnisse, Quellcode im Ordner [wasmer/](https://github.com/ariasorhab/borehole-hub/tree/main/wasmer)
 - 263 automatische Tests
 - Koordinaten: ETRS89 / UTM 32N (EPSG:25832)
 - Karte mit Leaflet und OpenStreetMap, optional HLNUG-Ebenen (GÜK 300, GK 25, BFD 50)

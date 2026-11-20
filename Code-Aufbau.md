@@ -16,6 +16,7 @@ BoreholeHub ist eine Web-Anwendung für Bohrdaten. Sie nutzt ASP.NET Core 8 (Raz
 | [src/BoreholeHub.Web/Reports](https://github.com/ariasorhab/borehole-hub/tree/main/src/BoreholeHub.Web/Reports) | Der PDF-Bericht. |
 | [tests/BoreholeHub.Tests](https://github.com/ariasorhab/borehole-hub/tree/main/tests/BoreholeHub.Tests) | Die automatischen Tests. |
 | [scripts](https://github.com/ariasorhab/borehole-hub/tree/main/scripts) | Start- und Build-Skripte für Windows. |
+| [wasmer](https://github.com/ariasorhab/borehole-hub/tree/main/wasmer) | Die Browser-Version für [boreholehub.wasmer.app](https://boreholehub.wasmer.app/): dieselbe App in JavaScript, läuft ohne Server ganz im Browser. Gleiche Seiten, Zeichnungen und Ergebnisse; der PDF-Bericht ist eine Druckansicht. |
 
 ## Wie die Daten fließen
 
@@ -39,7 +40,8 @@ Das Testprojekt hat 30 Dateien mit 235 Testmethoden. Einige Methoden laufen mit 
 
 ## Selbst starten
 
-- Live-Demo: [borehole-hub-3a93c.containers.snapdeploy.app](https://borehole-hub-3a93c.containers.snapdeploy.app)
+- Live-Demo (startet sofort, läuft im Browser): [boreholehub.wasmer.app](https://boreholehub.wasmer.app/)
+- Server-Version (ASP.NET Core, erster Aufruf bis etwa eine Minute): [borehole-hub-3a93c.containers.snapdeploy.app](https://borehole-hub-3a93c.containers.snapdeploy.app)
 - Windows-Version (64 Bit, ohne Installation): Laden Sie auf GitHub in den Releases die Datei BoreholeHub-1.0.2-win-x64.zip herunter und entpacken Sie sie. Starten Sie dann Start-BoreholeHub.cmd per Doppelklick. Die App läuft mit SQLite, Sie brauchen also keinen SQL Server. Der Browser öffnet http://localhost:5080. Klicken Sie dort auf "Demo-Projekt laden". Die zweite Datei, Start-BoreholeHub-SQLServer.cmd, ist für einen lokalen SQL Server gedacht.
 
 ## Ehrliche Hinweise
